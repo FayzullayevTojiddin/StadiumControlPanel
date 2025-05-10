@@ -3,6 +3,7 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
+use App\Models\StadionField;
 
 class Booking extends Model
 {
@@ -15,4 +16,9 @@ class Booking extends Model
         'price',
         'status'
     ];
+
+    public function stadionField()
+    {
+        return $this->belongsTo(StadionField::class);
+    }
 }

@@ -24,7 +24,7 @@ class Stadion extends Model
         return $this->belongsTo(User::class);
     }
 
-    public function stadionField()
+    public function stadionFields()
     {
         return $this->hasMany(StadionField::class);
     }
